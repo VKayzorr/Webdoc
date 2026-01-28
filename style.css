@@ -1,0 +1,169 @@
+/* --- CONFIGURATION DE BASE --- */
+html {
+    scroll-behavior: smooth;
+}
+
+.video-container {
+    max-width: 600px;  /* Limite la largeur (tu peux ajuster ce chiffre) */
+    margin: 30px auto; /* Centre la vidéo et ajoute un peu d'espace */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+/* --- SECTION HERO --- */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 25px 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hero-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15); 
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.02);
+}
+
+/* --- SECTIONS TEXTE --- */
+.content-section {
+    padding: 100px 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.accent { color: #ff3e3e; }
+
+.note-intention {
+    background: #1e1e1e;
+    padding: 40px;
+    border-left: 4px solid #ff3e3e;
+    margin-top: 50px;
+}
+
+/* --- IMAGE TEXTE LAYOUT --- */
+.image-text-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #0e0e0e;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* --- GRILLE CHAPITRES --- */
+.section-title { text-align: center; margin-bottom: 60px; }
+
+.chapter-link { text-decoration: none; color: inherit; }
+
+.chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.chapter-box {
+    background: #1e1e1e;
+    padding: 40px 30px;
+    transition: 0.4s;
+    border-top: 2px solid transparent;
+}
+
+.chapter-box:hover {
+    transform: translateY(-8px);
+    border-top: 2px solid #ff3e3e;
+}
+
+.chapter-number { color: #ff3e3e; font-size: 1.5rem; font-weight: bold; }
+
+/* --- VOILE LARGE ET VIDÉO FINALE --- */
+.full-video-wrapper {
+    position: relative;
+    background-color: #000000;
+    padding: 100px 0;
+    margin-top: 80px;
+}
+
+.video-full-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.98); /* Voile très opaque */
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.overlay-content { text-align: center; }
+
+.reveal-button {
+    padding: 20px 50px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ff3e3e;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.4s;
+}
+
+.reveal-button:hover {
+    background-color: #ff3e3e;
+    transform: scale(1.05);
+}
+
+.main-video {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer { padding: 50px; text-align: center; color: #555; }
+
+@media (max-width: 900px) {
+    .image-text-layout { flex-direction: column; text-align: center; }
+}
