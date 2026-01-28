@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Thérapie Invisible - WebDoc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <a href="#intro" class="hero-btn">Pensez-vous que la musculation n'a qu'un impact corporel ?</a>
+        </div>
+    </header>
+
+    <section id="intro" class="content-section synopsis">
+        <h2>La musculation comme <span class="accent">thérapie invisible</span></h2>
+        <p class="lead-text">
+            La musculation est souvent montrée comme un sport de performance ou d’apparence. 
+            Pourtant, pour beaucoup, elle est un refuge, un outil silencieux pour retrouver confiance 
+            ou traverser des périodes sombres.
+        </p>
+        
+        <div class="note-intention">
+            <h3>Note d’intention</h3>
+            <p>Mon intention est de donner la parole à une personne pour qui la muscu est un moyen de se reconstruire. Le but n’est pas de faire l’éloge de la musculation, mais de rendre visible une vérité discrète.</p>
+        </div>
+    </section>
+
+    <section class="content-section image-section">
+        <div class="image-text-layout">
+            <div class="text-content">
+                <h3>Le vrai combat ne se voit pas dans le miroir.</h3>
+                <p>Comment la musculation joue-t-elle un rôle thérapeutique invisible dans la vie de personnes confrontées à l’anxiété, la perte d’estime de soi ou à des épreuves personnelles ? Ce web-documentaire explorera cette facette rarement évoquée.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800" alt="Introspection musculation" class="responsive-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2 class="section-title">Le Parcours Interactif</h2>
+        <div class="chapters-grid">
+            <a href="chapitre1.html" class="chapter-link">
+                <article class="chapter-box">
+                    <span class="chapter-number">01</span>
+                    <h3>L'Avant</h3>
+                    <p>Le contexte et les difficultés avant le premier pas en salle.</p>
+                    <span class="explore-btn">Explorer →</span>
+                </article>
+            </a>
+            <a href="chapitre2.html" class="chapter-link">
+                <article class="chapter-box">
+                    <span class="chapter-number">02</span>
+                    <h3>Le Déclic</h3>
+                    <p>La première séance et le choix de la barre comme alliée.</p>
+                    <span class="explore-btn">Explorer →</span>
+                </article>
+            </a>
+            <a href="chapitre3.html" class="chapter-link">
+                <article class="chapter-box">
+                    <span class="chapter-number">03</span>
+                    <h3>La Thérapie</h3>
+                    <p>L'impact mental et les combats invisibles derrière les charges.</p>
+                    <span class="explore-btn">Explorer →</span>
+                </article>
+            </a>
+            <a href="chapitre4.html" class="chapter-link">
+                <article class="chapter-box">
+                    <span class="chapter-number">04</span>
+                    <h3>Le Bilan</h3>
+                    <p>La solidité mentale acquise aujourd'hui grâce à tous les efforts réalisés.</p>
+                    <span class="explore-btn">Explorer →</span>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <section class="full-video-wrapper">
+        <div class="video-full-overlay" id="videoOverlay">
+            <div class="overlay-content">
+                <h3>Prêt à voir l'intégralité ?</h3>
+                <button class="reveal-button" id="revealButton">Découvrir le Film</button>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Le Témoignage <span class="accent">Complet</span></h2>
+            <p class="lead-text" style="text-align: center;">L'expérience intégrale, sans interruption.</p>
+            
+            <div class="video-container main-video">
+                <video width="100%" controls poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1920">
+                    <source src="Final.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Web-Documentaire &copy; 2026 — La Thérapie Invisible</p>
+    </footer>
+
+    <script>
+        document.getElementById('revealButton').addEventListener('click', function() {
+            var overlay = document.getElementById('videoOverlay');
+            overlay.style.opacity = '0'; 
+            overlay.style.pointerEvents = 'none'; 
+            setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 1000); 
+        });
+    </script>
+
+</body>
+</html>
